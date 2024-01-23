@@ -5,17 +5,178 @@
   box-sizing: border-box;
 }
 
-body {
- background: ;
- color: ;
- -webkit-font-smoothing: antialiased;
+/* Variables y fuentes */
+@font-face{
+  font-family: "fuente1";
+  src: url("../fonts/lato/static/Lato-Regular.ttf");
+}
+@font-face{
+  font-family: "fuente2";
+  src: url("../fonts/Open-Sans/OpenSans-VariableFont_wdth,wght.ttf");
+}
+@font-face{
+  font-family: "fuente3";
+  src: url("../fonts/Oswald/Oswald-VariableFont_wght.ttf");
+}
+/* Estilos web */
+:root{
+  --color0: White;
+  --color1: rgb(42, 42, 42);
+  --color2: Grey;
+  --color3: #4c439e;
+  --fuente1: "fuente1";
+  --fuente2: "fuente2";
+  --fuente3: "fuente3";
+
+  font-family: var(--fuente2); 
+}
+h1{
+    color: var(--color1);
+    font-size: 1.4rem;
+    font-family: var(--fuente1);
+}
+h2{
+    color: var(--color2);
+    font-size: 1.8rem;
+    font-family: var(--fuente2);
+    font-weight: 100;
+    margin-top: 4rem;
+}
+h3{
+    width:100%;
+    text-align: left;
+    color: var(--color1);
+    font-size: 2rem;
+    font-family: var(--fuente2);
+    font-weight: 100;
+}
+h4{
+    font-size: 1.2rem;   
+    font-family: var(--fuente3);
+    color: var(--color2);
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+p{
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    line-height: 1.6rem;
+}
+a{
+  text-decoration: none;
+  color: inherit;
 }
 
-body, input, button {
- font-size: ;
- font-family: ;
-}
+/* Cajas Principales */
 
-button {
- cursor: pointer;
+nav,header,main,footer{
+  width: 100%; 
+  max-width: 2560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+section, article{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-direction: flex-start;
+}
+section{
+  margin-top: 2rem;
+}
+article{
+  margin-top: 2rem;
+  row-gap: 1rem;
+}
+.anchoEstrecho{
+  max-width: 1200px;
+  width: 95%;
+}
+/* Nav */
+nav{
+  position: fixed;
+  z-index: 100;
+  top: 0;
+}
+nav .sup{
+  width: 100%;
+  height: 5vh;
+  background-color: var(--color0);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-direction: center;
+  position: relative;
+}
+nav .sup img{
+  height: 63px;
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
+}
+nav .inf{
+  width: 100%;
+  height: 5vh;
+  background-color: var(--color0);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-direction: center;
+}
+nav .inf ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; 
+  list-style: none; 
+  column-gap: 4rem;
+ }
+nav .inf ul li a{
+ color: var(--color1);
+}
+nav .inf ul li a:visited{
+  color: var(--color1);
+}
+nav .inf ul li a:hover{
+  color: var(--color3);
+  font-weight: bold;
+}
+/* Estilos del Header */
+header{
+  margin-top: 70px;
+  height: 90vh;
+  background-image: url("../img/ES_header_banner_YOUTHFUL.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+ 
+}
+header .contenedor{
+  
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  row-gap: 2px;
+  font-family: var(--fuente1);
+  user-select: none;
+  color: var(--color0);
+  transform: translateY(40px);
+
+}
+header .contenedor :nth-child(1){
+  font-size: 3vw;
+  line-height: 5vw;
+  color: var(--color2);
+  
+}
+header .contenedor :nth-child(2){
+  font-size: 2.4vw;
+  line-height: 3vw;
+  color: var(--color2);
 }
