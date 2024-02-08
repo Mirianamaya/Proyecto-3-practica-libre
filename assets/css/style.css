@@ -22,7 +22,7 @@
 :root{
   --color0: White;
   --color1: rgb(42, 42, 42);
-  --color2: Grey;
+  --color2: rgb(201, 198, 198);
   --color3: #4c439e;
   --fuente1: "fuente1";
   --fuente2: "fuente2";
@@ -46,7 +46,7 @@ h3{
     width:100%;
     text-align: left;
     color: var(--color1);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: var(--fuente2);
     font-weight: 100;
 }
@@ -69,7 +69,7 @@ a{
 
 /* Cajas Principales */
 
-nav,header,main,footer{
+nav,header{
   width: 100%; 
   max-width: 2560px;
   display: flex;
@@ -77,56 +77,50 @@ nav,header,main,footer{
   justify-content: flex-start;
   align-items: flex-start;
 }
-section, article{
+section{
+  padding: 10px;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content:space-evenly;
   align-items: center;
-  flex-direction: flex-start;
+  flex-wrap: wrap;  
+  gap: 1rem;
 }
-section{
-  margin-top: 2rem;
-}
-article{
-  margin-top: 2rem;
-  row-gap: 1rem;
-}
-.anchoEstrecho{
-  max-width: 1200px;
-  width: 95%;
-}
+
 /* Nav */
 nav{
   position: fixed;
-  z-index: 100;
+  z-index: 10;
   top: 0;
 }
-nav .sup{
+nav .navsup{
   width: 100%;
   height: 5vh;
-  background-color: var(--color0);
+  background-color: var(--color2);
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-direction: center;
   position: relative;
 }
-nav .sup img{
-  height: 63px;
+nav .navsup img{
+  width: 45px;
+  height: 30px;
   position: absolute;
-  left: 1rem;
-  top: 0.5rem;
+  left: 0.5rem;
+  top: 1.3rem;
 }
-nav .inf{
+nav .navinf{
   width: 100%;
   height: 5vh;
-  background-color: var(--color0);
+  background-color: var(--color2);
   display: flex;
   flex-direction: row;
   justify-content: center;
-  flex-direction: center;
+  align-items: center;
 }
-nav .inf ul{
+nav .navinf ul{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -134,49 +128,153 @@ nav .inf ul{
   list-style: none; 
   column-gap: 4rem;
  }
-nav .inf ul li a{
+nav .navinf ul li a{
  color: var(--color1);
 }
-nav .inf ul li a:visited{
+nav .navinf ul li a:visited{
   color: var(--color1);
 }
-nav .inf ul li a:hover{
+nav .navinf ul li a:hover{
   color: var(--color3);
   font-weight: bold;
 }
 /* Estilos del Header */
 header{
   margin-top: 70px;
-  height: 90vh;
-  background-image: url("../img/ES_header_banner_YOUTHFUL.jpg");
+  height: 5vh;
+  /* background-image: url("../img/ES_header_banner_YOUTHFUL.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+  background-color: var(--color2);
   
- 
 }
-header .contenedor{
-  
-  width: 500px;
+footer{
+  height: 4vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+footer p{
+  color: var(--color1);
+  font-size: .7rem;
+}
+article{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  row-gap: 2px;
-  font-family: var(--fuente1);
-  user-select: none;
-  color: var(--color0);
-  transform: translateY(40px);
+  justify-content: space-around;
+  align-items:center;
+}
+article p{
+  width: 100%;
+  font-size: 1rem;
+}
 
+.grandpa{
+  width: 250px; 
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items:center;
 }
-header .contenedor :nth-child(1){
-  font-size: 3vw;
-  line-height: 5vw;
-  color: var(--color2);
-  
+.item{
+  border: 1px solid;
+  font-size: 0.8rem;
+  background:white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-header .contenedor :nth-child(2){
-  font-size: 2.4vw;
-  line-height: 3vw;
-  color: var(--color2);
+.parent1{
+  width: 100%;
+  height: 250px;
+  border: 3px solid;  
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3px;
 }
+article .parent2{
+  width: 100%;
+  height: 250px;
+  border: 3px solid;  
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+article .parent3{
+  width: 100%;
+  height: 250px;
+  border: 3px solid;  
+  display: flex; 
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+article .parent4{
+  width: 100%;
+  height: 250px;
+  border: 3px solid;  
+  display: flex; 
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+article .parent5{
+  width: 100%;
+  height: 250px;
+  border: 3px solid;  
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+article .parent6{
+  width: 100%;
+  height: 250px;
+  border: 3px solid;  
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+article .parent7{
+  width: 100%;
+  height: 250px;
+  border: 3px solid;  
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+article .parent8{
+  width: 100%;
+  height: 250px;
+  border: 3px solid;  
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+
